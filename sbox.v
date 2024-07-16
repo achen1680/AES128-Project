@@ -3,7 +3,8 @@ module sbox (
     input [7:0] col;
     output [7:0] subbed;
 );
-
+// This takes in each individual item in the column and converts it
+// temp (from gen_key) stores the resulted sboxed matrix
 reg [7:0] temp;
 
 always @(posedge clk) begin
