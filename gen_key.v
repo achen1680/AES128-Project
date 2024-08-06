@@ -1,7 +1,7 @@
 module gen_key (
     input [3:0] round,
     input [127:0] key_in,
-    output [127:0] key_out,
+    output [127:0] key_out
 );
 
 wire [31:0] col1, col2, col3, col4, temp;
