@@ -32,7 +32,9 @@ round R6(.data_in(data_out5), .key(key_out5), .data_out(data_out6));
 round R7(.data_in(data_out6), .key(key_out6), .data_out(data_out7));
 round R8(.data_in(data_out7), .key(key_out7), .data_out(data_out8));
 round R9(.data_in(data_out8), .key(key_out8), .data_out(data_out9));
-last_round R10(.data_in(data_out9), .key(key_out9), .data_out(data_out));
+last_round R10(.data_in(data_out9), .key(key_out9), .data_out(data_out10));
+
+assign data_out = data_out10;
 
 endmodule
 
