@@ -1,7 +1,7 @@
 module aes128 (
-    input data_in [127:0],
-    input key_in [127:0],
-    output data_out [127:0]
+    input [127:0] data_in,
+    input [127:0] key_in,
+    output [127:0] data_out
 );
 
 wire [127:0] pw_data, key_out1, key_out2, key_out3, key_out4, key_out5, key_out6, key_out7, key_out8, key_out9, key_out10;
