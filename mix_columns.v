@@ -21,6 +21,7 @@ endfunction;
 function [31:0] mixer;
     input [31:0] col;
     // row 0
+    begin
     mixer[31:24] = xTwo(col[31:24]) ^ xThree(col[23:16]) ^ col[15:8] ^ col[7:0];
 
     //row 1
@@ -31,6 +32,7 @@ function [31:0] mixer;
 
     //row 3
     mixer[7:0] = xThree(col[31:24]) ^ col[23:16] ^ col[15:8] ^ xTwo(col[7:0]);
+    end
 endfunction;
 
 endmodule
