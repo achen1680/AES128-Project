@@ -1,14 +1,15 @@
 module aes128 (
+    input clk,
     input [127:0] data_in,
     input [127:0] key_in,
     output [127:0] data_out
 );
 
 wire [127:0] pw_data, key_out1, key_out2, key_out3, key_out4, key_out5, key_out6, key_out7, key_out8, key_out9, key_out10;
-wire [127:0] data_out1, data_out2, data_out3, data_out4, data_out5, data_out6, data_out7, data_out8, data_out9, data_out10;
+wire [127:0] data_out1, data_out2, data_out3, data_out4, data_out5, data_out6, data_out7, data_out8, data_out9; //removed data_out10
 
 // Pre-whitening
-assign pw_data = key_in ^ data_in;
+always @(posedge clk) assign pw_data = key_in ^ data_in;
 
 // Key Generation
 gen_key key1(.round(4'h0), .key_in(key_in), .key_out(key_out1));
@@ -32,9 +33,9 @@ round R6(.data_in(data_out5), .key(key_out5), .data_out(data_out6));
 round R7(.data_in(data_out6), .key(key_out6), .data_out(data_out7));
 round R8(.data_in(data_out7), .key(key_out7), .data_out(data_out8));
 round R9(.data_in(data_out8), .key(key_out8), .data_out(data_out9));
-last_round R10(.data_in(data_out9), .key(key_out9), .data_out(data_out10));
+last_round R10(.data_in(data_out9), .key(key_out9), .data_out(data_out)); //changed from data_out10 to data_out
 
-assign data_out = data_out10;
+//assign data_out = data_out10;
 
 endmodule
 

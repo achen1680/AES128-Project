@@ -1,4 +1,5 @@
 module sbox (
+    input clk,
     input [7:0] col,
     output [7:0] subbed
 );
@@ -6,7 +7,7 @@ module sbox (
 // temp (from gen_key) stores the resulted sboxed matrix
 reg [7:0] temp;
 
-always @(*) begin
+always @(posedge clk) begin
     case (col)
     8'h00: temp = 8'h63;
     8'h01: temp = 8'h7c;

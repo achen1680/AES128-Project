@@ -1,4 +1,5 @@
 module shift_rows(
+    input clk,
     input [127:0] data_in,
     output [127:0] data_out
 );
@@ -9,6 +10,7 @@ module shift_rows(
 // - third row (left circular shift by 2)
 // - fourth row (left circular shift by 3)
 
+always @(posedge clk) begin
 // first col
 assign data_out[127:120] = data_in[127:120];
 assign data_out[119:112] = data_in[87:80];
@@ -33,5 +35,6 @@ assign data_out[31:24] = data_in[31:24];
 assign data_out[23:16] = data_in[119:112];
 assign data_out[15:8] = data_in[79:72];
 assign data_out[7:0] = data_in[39:32];
+end
 
 endmodule

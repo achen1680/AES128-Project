@@ -1,9 +1,11 @@
 module sub_byte(
+    input clk,
     input [127:0] data_in,
     output [127:0] data_out
 );
 
 wire [127:0] subbed;
+reg [127:0] data_out;
 
 sbox group1(.col(data_in[127:120]), .subbed(subbed[127:120]));
 sbox group2(.col(data_in[119:112]), .subbed(subbed[119:112]));
@@ -22,6 +24,6 @@ sbox group14(.col(data_in[23:16]), .subbed(subbed[23:16]));
 sbox group15(.col(data_in[15:8]), .subbed(subbed[15:8]));
 sbox group16(.col(data_in[7:0]), .subbed(subbed[7:0]));
 
-assign data_out = subbed;
+always @(posedge clk) data_out <= subbed;
 
 endmodule
