@@ -1,0 +1,216 @@
+$date
+	Thu Aug 29 12:42:49 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module sub_tb $end
+$var wire 128 ! data_out [127:0] $end
+$var reg 1 " clk $end
+$var reg 128 # data_in [127:0] $end
+$scope module sub $end
+$var wire 1 " clk $end
+$var wire 128 $ data_in [127:0] $end
+$var wire 128 % subbed [127:0] $end
+$var reg 128 & data_out [127:0] $end
+$scope module group1 $end
+$var wire 1 " clk $end
+$var wire 8 ' col [7:0] $end
+$var wire 8 ( subbed [7:0] $end
+$var reg 8 ) temp [7:0] $end
+$upscope $end
+$scope module group10 $end
+$var wire 1 " clk $end
+$var wire 8 * col [7:0] $end
+$var wire 8 + subbed [7:0] $end
+$var reg 8 , temp [7:0] $end
+$upscope $end
+$scope module group11 $end
+$var wire 1 " clk $end
+$var wire 8 - col [7:0] $end
+$var wire 8 . subbed [7:0] $end
+$var reg 8 / temp [7:0] $end
+$upscope $end
+$scope module group12 $end
+$var wire 1 " clk $end
+$var wire 8 0 col [7:0] $end
+$var wire 8 1 subbed [7:0] $end
+$var reg 8 2 temp [7:0] $end
+$upscope $end
+$scope module group13 $end
+$var wire 1 " clk $end
+$var wire 8 3 col [7:0] $end
+$var wire 8 4 subbed [7:0] $end
+$var reg 8 5 temp [7:0] $end
+$upscope $end
+$scope module group14 $end
+$var wire 1 " clk $end
+$var wire 8 6 col [7:0] $end
+$var wire 8 7 subbed [7:0] $end
+$var reg 8 8 temp [7:0] $end
+$upscope $end
+$scope module group15 $end
+$var wire 1 " clk $end
+$var wire 8 9 col [7:0] $end
+$var wire 8 : subbed [7:0] $end
+$var reg 8 ; temp [7:0] $end
+$upscope $end
+$scope module group16 $end
+$var wire 1 " clk $end
+$var wire 8 < col [7:0] $end
+$var wire 8 = subbed [7:0] $end
+$var reg 8 > temp [7:0] $end
+$upscope $end
+$scope module group2 $end
+$var wire 1 " clk $end
+$var wire 8 ? col [7:0] $end
+$var wire 8 @ subbed [7:0] $end
+$var reg 8 A temp [7:0] $end
+$upscope $end
+$scope module group3 $end
+$var wire 1 " clk $end
+$var wire 8 B col [7:0] $end
+$var wire 8 C subbed [7:0] $end
+$var reg 8 D temp [7:0] $end
+$upscope $end
+$scope module group4 $end
+$var wire 1 " clk $end
+$var wire 8 E col [7:0] $end
+$var wire 8 F subbed [7:0] $end
+$var reg 8 G temp [7:0] $end
+$upscope $end
+$scope module group5 $end
+$var wire 1 " clk $end
+$var wire 8 H col [7:0] $end
+$var wire 8 I subbed [7:0] $end
+$var reg 8 J temp [7:0] $end
+$upscope $end
+$scope module group6 $end
+$var wire 1 " clk $end
+$var wire 8 K col [7:0] $end
+$var wire 8 L subbed [7:0] $end
+$var reg 8 M temp [7:0] $end
+$upscope $end
+$scope module group7 $end
+$var wire 1 " clk $end
+$var wire 8 N col [7:0] $end
+$var wire 8 O subbed [7:0] $end
+$var reg 8 P temp [7:0] $end
+$upscope $end
+$scope module group8 $end
+$var wire 1 " clk $end
+$var wire 8 Q col [7:0] $end
+$var wire 8 R subbed [7:0] $end
+$var reg 8 S temp [7:0] $end
+$upscope $end
+$scope module group9 $end
+$var wire 1 " clk $end
+$var wire 8 T col [7:0] $end
+$var wire 8 U subbed [7:0] $end
+$var reg 8 V temp [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx V
+bx U
+b1000 T
+bx S
+bx R
+b111 Q
+bx P
+bx O
+b110 N
+bx M
+bx L
+b101 K
+bx J
+bx I
+b100 H
+bx G
+bx F
+b11 E
+bx D
+bx C
+b10 B
+bx A
+bx @
+b1 ?
+bx >
+bx =
+b1111 <
+bx ;
+bx :
+b1110 9
+bx 8
+bx 7
+b1101 6
+bx 5
+bx 4
+b1100 3
+bx 2
+bx 1
+b1011 0
+bx /
+bx .
+b1010 -
+bx ,
+bx +
+b1001 *
+bx )
+bx (
+b0 '
+bx &
+bx %
+b10000001000000011000001000000010100000110000001110000100000001001000010100000101100001100000011010000111000001111 $
+b10000001000000011000001000000010100000110000001110000100000001001000010100000101100001100000011010000111000001111 #
+0"
+bx !
+$end
+#10
+b1100011011111000111011101111011111100100110101101101111110001010011000000000001011001110010101111111110110101111010101101110110 !
+b1100011011111000111011101111011111100100110101101101111110001010011000000000001011001110010101111111110110101111010101101110110 &
+b1100011 (
+b1100011 )
+b1111100 @
+b1111100 A
+b1110111 C
+b1110111 D
+b1111011 F
+b1111011 G
+b11110010 I
+b11110010 J
+b1101011 L
+b1101011 M
+b1101111 O
+b1101111 P
+b11000101 R
+b11000101 S
+b110000 U
+b110000 V
+b1 +
+b1 ,
+b1100111 .
+b1100111 /
+b101011 1
+b101011 2
+b11111110 4
+b11111110 5
+b11010111 7
+b11010111 8
+b10101011 :
+b10101011 ;
+b1100011011111000111011101111011111100100110101101101111110001010011000000000001011001110010101111111110110101111010101101110110 %
+b1110110 =
+b1110110 >
+1"
+#20
+0"

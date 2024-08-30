@@ -6,9 +6,17 @@ module gen_key_tb;
 
 reg [3:0] round;
 reg [127:0] key_in;
+reg clk;
 wire [127:0] key_out;
 
-gen_key test(round, key_in, key_out);
+gen_key test(clk, round, key_in, key_out);
+
+//Clock Generation?
+
+initial begin
+    clk = 0;
+    forever #10 clk = ~clk; // Once every 1ns?
+end
 
 initial begin
     
@@ -27,8 +35,6 @@ initial begin
     R7 - ead27321b58dbad2312bf5607f8d292f
     R8 - ac7766f319fadc2128d12941575c006e
     R9 - d014f9a8c9ee2589e13f0cc8b6630ca6
-
-
     */
 
     key_in = 128'ha0fafe1788542cb123a339392a6c7605;

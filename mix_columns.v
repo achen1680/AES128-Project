@@ -1,12 +1,19 @@
 module mix_columns (
+    input clk,
     input [127:0] data_in,
     output [127:0] data_out
 );
 
-assign data_out[127:96] = mixer(data_in[127:96]);
-assign data_out[95:64] = mixer(data_in[95:64]);
-assign data_out[63:32] = mixer(data_in[63:32]);
-assign data_out[31:0] = mixer(data_in[31:0]);
+reg [127:0] temp;
+
+always @(posedge clk) begin
+    temp[127:96] <= mixer(data_in[127:96]);
+    temp[95:64] <= mixer(data_in[95:64]);
+    temp[63:32] <= mixer(data_in[63:32]);
+    temp[31:0] <= mixer(data_in[31:0]);
+end
+
+assign data_out = temp;
 
 function [7:0] xTwo;
     input [7:0] data;
